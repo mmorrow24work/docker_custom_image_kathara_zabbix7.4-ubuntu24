@@ -41,3 +41,18 @@ WSL-Ubuntu 24.04.1 LTS:$
 * MySQL secure config, database, and user creation at build time (not for production)
 * Set up environment for startup script
 * Expose ports for Zabbix server, agent, and web frontend
+
+# docker-entrypoint.sh used to modify the custom docker image used with kathara - zabbix7.4-ubuntu24
+
+* Start MySQL
+* Wait for MySQL to be ready
+* Create Zabbix DB and user access for specific hosts
+* Enable log_bin_trust_function_creators option after importing database schema.
+* Import initial schema if tables are missing
+* Configure Zabbix server DB access
+* Configure Zabbix server EnableGlobalScripts=1 ( default EnableGlobalScripts=0 ) 
+* Configure Zabbix server StartPingers=5 ( default #StartPingers=1 ) 
+* Copy fping over cos it was missing from zabbix 7.4 server Ubuntu
+* cp /usr/bin/fping /usr/sbin/fping
+* Set up services: Apache, Zabbix server, agent (foreground)
+* Tail logs to keep the container alive
