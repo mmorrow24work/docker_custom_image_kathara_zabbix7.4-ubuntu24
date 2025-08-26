@@ -60,67 +60,51 @@ WSL-Ubuntu 24.04.1 LTS:$
 # Example build ...
 
 ```
-  mmorrow24work@digital-twin-version-1-0:~/docker/custom-images/docker_custom_image_kathara_zabbix7.4_frr$ sudo docker build -t zabbix7.4_frr:1.0 .
-[+] Building 60.7s (8/8) FINISHED                                                                                                                                                                                                         docker:default
+mmorrow24work@digital-twin-version-1-0:~/docker/custom-images/docker_custom_image_kathara_zabbix7.4-ubuntu24$ docker --debug build -t kathara_zabbix7.4-ubuntu24:1.0 . 
+[+] Building 137.4s (10/10) FINISHED                                                                                                                                                                                                      docker:default
  => [internal] load build definition from Dockerfile                                                                                                                                                                                                0.0s
- => => transferring dockerfile: 1.68kB                                                                                                                                                                                                              0.0s
- => [internal] load metadata for docker.io/kathara/frr:latest                                                                                                                                                                                       1.5s
+ => => transferring dockerfile: 1.55kB                                                                                                                                                                                                              0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:24.04                                                                                                                                                                                     1.2s
  => [internal] load .dockerignore                                                                                                                                                                                                                   0.0s
  => => transferring context: 2B                                                                                                                                                                                                                     0.0s
- => [1/4] FROM docker.io/kathara/frr:latest@sha256:8b453c1f69fce93f2f651a0b73c53f7bc3ed9f78e885a9bcd5c785f4abf555e0                                                                                                                                45.0s
- => => resolve docker.io/kathara/frr:latest@sha256:8b453c1f69fce93f2f651a0b73c53f7bc3ed9f78e885a9bcd5c785f4abf555e0                                                                                                                                 0.0s
- => => sha256:fd0410a2d1aece5360035b61b0a60d8d6ce56badb9d30a5c86113b3ec724f72a 48.48MB / 48.48MB                                                                                                                                                    1.3s
- => => sha256:7425ba97a6f14cfd08cecd71f8963637ae1f13484bd8d9b7b96ca84f8a4a1742 15.16MB / 15.16MB                                                                                                                                                    1.3s
- => => sha256:d19966df6a79a48157aa7d928453083e02e688e17d6bd9f2f7df14399ead1eee 207B / 207B                                                                                                                                                          0.7s
- => => sha256:8b453c1f69fce93f2f651a0b73c53f7bc3ed9f78e885a9bcd5c785f4abf555e0 1.61kB / 1.61kB                                                                                                                                                      0.0s
- => => sha256:f1433f17da2ec0ce96e26ad2b288b986ecbd6eff50d3905f47c58e3577477e76 3.52kB / 3.52kB                                                                                                                                                      0.0s
- => => sha256:0fbf3877a39c4c5f42ecc962ff700f301e66a04faaa2f865e7bfc4c2003a0467 8.81kB / 8.81kB                                                                                                                                                      0.0s
- => => sha256:e6134c5a33aad3f1967498a21cd6ffe937cf08a0696ba38bb30fb19a942e7d4f 319.41MB / 319.41MB                                                                                                                                                 10.4s
- => => sha256:cde70b2a4a16498769fdaf05aee1c39034190c16e1be92fd0e301ead1a52afa1 1.24MB / 1.24MB                                                                                                                                                      2.0s
- => => sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1 32B / 32B                                                                                                                                                            1.5s
- => => extracting sha256:fd0410a2d1aece5360035b61b0a60d8d6ce56badb9d30a5c86113b3ec724f72a                                                                                                                                                           5.8s
- => => sha256:6857d1bcc126d053b37a7828c72ecc1a39cc5ce142a8bbb7160e9909f117536a 10.67MB / 10.67MB                                                                                                                                                    2.2s
- => => sha256:5afc2efa84ad86e0335482afacfd19f78e019a5ac6031c6515745ec77620274c 147B / 147B                                                                                                                                                          2.6s
- => => sha256:1391e35c3ca19403d071b6cb10fc5b6c7b4661cdec259755f6080b00a7b0db47 56.25kB / 56.25kB                                                                                                                                                    2.8s
- => => sha256:4737c8663241fa7d81ba2562581e7b01fe3a77c612a1ccd68e18c637402dc576 1.59kB / 1.59kB                                                                                                                                                      3.2s
- => => sha256:8f27f8bae8fd29c3763f454544cca5a22b99778e22ddb37b1950b102231f2683 388B / 388B                                                                                                                                                          3.0s
- => => sha256:e5e275f69c2b1adf53c89b0dee8e718a95de7a88b9b50db57e50cec19fa94e27 12.13kB / 12.13kB                                                                                                                                                    3.8s
- => => sha256:a04e33641901529d92565ba8a3a5b80ba812229923972cb791b931cf73b9dc34 218B / 218B                                                                                                                                                          3.8s
- => => sha256:d2c788a002022205e9dfea4a3f9ddef6203b60ea791709e6c72e7c7edfbd0864 23.54MB / 23.54MB                                                                                                                                                    5.4s
- => => sha256:24c4de2a5e3bc67a220f2f9034f58c65659cf959c12d715dfb7cce7ae55a8435 211B / 211B                                                                                                                                                          4.4s
- => => sha256:bcb89f1e3ed294a7e960b87b6dea1544883542690c0f92538b39abb30c9fe7af 425B / 425B                                                                                                                                                          5.0s
- => => sha256:bd89cb40bc633c5044cbf60dc9a917aea7bb6e810d5186493122f64a8de87f80 614B / 614B                                                                                                                                                          5.6s
- => => extracting sha256:7425ba97a6f14cfd08cecd71f8963637ae1f13484bd8d9b7b96ca84f8a4a1742                                                                                                                                                           0.6s
- => => extracting sha256:d19966df6a79a48157aa7d928453083e02e688e17d6bd9f2f7df14399ead1eee                                                                                                                                                           0.0s
- => => extracting sha256:e6134c5a33aad3f1967498a21cd6ffe937cf08a0696ba38bb30fb19a942e7d4f                                                                                                                                                          30.1s
- => => extracting sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1                                                                                                                                                           0.0s
- => => extracting sha256:cde70b2a4a16498769fdaf05aee1c39034190c16e1be92fd0e301ead1a52afa1                                                                                                                                                           0.1s
- => => extracting sha256:6857d1bcc126d053b37a7828c72ecc1a39cc5ce142a8bbb7160e9909f117536a                                                                                                                                                           1.4s
- => => extracting sha256:5afc2efa84ad86e0335482afacfd19f78e019a5ac6031c6515745ec77620274c                                                                                                                                                           0.0s
- => => extracting sha256:1391e35c3ca19403d071b6cb10fc5b6c7b4661cdec259755f6080b00a7b0db47                                                                                                                                                           0.0s
- => => extracting sha256:4737c8663241fa7d81ba2562581e7b01fe3a77c612a1ccd68e18c637402dc576                                                                                                                                                           0.0s
- => => extracting sha256:8f27f8bae8fd29c3763f454544cca5a22b99778e22ddb37b1950b102231f2683                                                                                                                                                           0.0s
- => => extracting sha256:e5e275f69c2b1adf53c89b0dee8e718a95de7a88b9b50db57e50cec19fa94e27                                                                                                                                                           0.0s
- => => extracting sha256:a04e33641901529d92565ba8a3a5b80ba812229923972cb791b931cf73b9dc34                                                                                                                                                           0.0s
- => => extracting sha256:d2c788a002022205e9dfea4a3f9ddef6203b60ea791709e6c72e7c7edfbd0864                                                                                                                                                           1.0s
- => => extracting sha256:24c4de2a5e3bc67a220f2f9034f58c65659cf959c12d715dfb7cce7ae55a8435                                                                                                                                                           0.0s
- => => extracting sha256:bcb89f1e3ed294a7e960b87b6dea1544883542690c0f92538b39abb30c9fe7af                                                                                                                                                           0.0s
- => => extracting sha256:bd89cb40bc633c5044cbf60dc9a917aea7bb6e810d5186493122f64a8de87f80                                                                                                                                                           0.0s
- => [2/4] RUN apt-get update && apt-get install -y     zabbix-agent     snmpd     snmp     softflowd     iproute2     iputils-ping     bash     iperf3  && apt-get clean && rm -rf /var/lib/apt/lists/*                                            12.7s
- => [3/4] RUN echo -e "com2sec readonly  default         public\ngroup   myv1group v1            readonly\ngroup   myv2cgroup v2c          readonly\nview    all       included      .1\naccess  myv1group ""      any       noauth    exact  all   0.4s 
- => [4/4] RUN sed -i     -e 's/^Server=127.0.0.1/Server=192.168.10.7/'     -e 's/^Hostname=Zabbix server/Hostname=kathara-frr/'     /etc/zabbix/zabbix_agentd.conf                                                                                  0.4s 
- => exporting to image                                                                                                                                                                                                                              0.4s 
- => => exporting layers                                                                                                                                                                                                                             0.4s 
- => => writing image sha256:e7bc768a1303b8025bebf16200e52f922b55e209a46f48ad85ea69c9e466711f                                                                                                                                                        0.0s 
- => => naming to docker.io/library/zabbix7.4_frr:1.0                                                                                                                                                                                                0.0s 
+ => [1/5] FROM docker.io/library/ubuntu:24.04@sha256:7c06e91f61fa88c08cc74f7e1b7c69ae24910d745357e0dfe1d2c0322aaf20f9                                                                                                                               4.0s
+ => => resolve docker.io/library/ubuntu:24.04@sha256:7c06e91f61fa88c08cc74f7e1b7c69ae24910d745357e0dfe1d2c0322aaf20f9                                                                                                                               0.0s
+ => => sha256:7c06e91f61fa88c08cc74f7e1b7c69ae24910d745357e0dfe1d2c0322aaf20f9 6.69kB / 6.69kB                                                                                                                                                      0.0s
+ => => sha256:35f3a8badf2f74c1b320a643b343536f5132f245cbefc40ef802b6203a166d04 424B / 424B                                                                                                                                                          0.0s
+ => => sha256:e0f16e6366fef4e695b9f8788819849d265cde40eb84300c0147a6e5261d2750 2.29kB / 2.29kB                                                                                                                                                      0.0s
+ => => sha256:b71466b94f266b4c2e0881749670e5b88ab7a0fd4ca4a4cdf26cb45e4bde7e4e 29.72MB / 29.72MB                                                                                                                                                    1.1s
+ => => extracting sha256:b71466b94f266b4c2e0881749670e5b88ab7a0fd4ca4a4cdf26cb45e4bde7e4e                                                                                                                                                           2.6s
+ => [internal] load build context                                                                                                                                                                                                                   0.0s
+ => => transferring context: 2.94kB                                                                                                                                                                                                                 0.0s
+ => [2/5] RUN apt-get update &&     apt-get install -y wget lsb-release gnupg2     apt-transport-https ca-certificates curl software-properties-common     mariadb-server mariadb-client     iperf3 snmp nano iputils-ping apache2 libapache2-mod  99.3s
+ => [3/5] RUN wget https://repo.zabbix.com/zabbix/7.4/release/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest+ubuntu24.04_all.deb &&     dpkg -i zabbix-release_latest+ubuntu24.04_all.deb &&     apt-get update &&     apt-get install -  21.3s 
+ => [4/5] COPY docker-entrypoint.sh /usr/local/bin/                                                                                                                                                                                                 0.1s 
+ => [5/5] RUN chmod +x /usr/local/bin/docker-entrypoint.sh                                                                                                                                                                                          0.3s 
+ => exporting to image                                                                                                                                                                                                                             10.9s 
+ => => exporting layers                                                                                                                                                                                                                            10.9s 
+ => => writing image sha256:7a6a227f5cf2a05b0136ee122f1ead4442492ee09745d48a6cb466bbdb318022                                                                                                                                                        0.0s 
+ => => naming to docker.io/library/kathara_zabbix7.4-ubuntu24:1.0                                                                                                                                                                                   0.0s 
 
- 1 warning found (use docker --debug to expand):
- - JSONArgsRecommended: JSON arguments recommended for CMD to prevent unintended behavior related to OS signals (line 42)
-mmorrow24work@digital-twin-version-1-0:~/docker/custom-images/docker_custom_image_kathara_zabbix7.4_frr$ docker images
-permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Head "http://%2Fvar%2Frun%2Fdocker.sock/_ping": dial unix /var/run/docker.sock: connect: permission denied
-mmorrow24work@digital-twin-version-1-0:~/docker/custom-images/docker_custom_image_kathara_zabbix7.4_frr$ sudo docker images
-REPOSITORY      TAG       IMAGE ID       CREATED              SIZE
-zabbix7.4_frr   1.0       e7bc768a1303   About a minute ago   1.09GB
-mmorrow24work@digital-twin-version-1-0:~/docker/custom-images/docker_custom_image_kathara_zabbix7.4_frr$ 
+ 1 warning found:
+ - SecretsUsedInArgOrEnv: Do not use ARG or ENV instructions for sensitive data (ENV "MYSQL_ROOT_PASSWORD") (line 29)
+Sensitive data should not be used in the ARG or ENV commands
+More info: https://docs.docker.com/go/dockerfile/rule/secrets-used-in-arg-or-env/
+Dockerfile:29
+--------------------
+  28 |     # Set up environment for startup script
+  29 | >>> ENV MYSQL_ROOT_PASSWORD=rootpass \
+  30 | >>>     ZABBIX_DBNAME=zabbix \
+  31 | >>>     ZABBIX_DBUSER=zabbix \
+  32 | >>>     ZABBIX_DBPASSWORD=zabbixpass
+  33 |     
+--------------------
+
+mmorrow24work@digital-twin-version-1-0:~/docker/custom-images/docker_custom_image_kathara_zabbix7.4-ubuntu24$ docker images
+REPOSITORY                   TAG       IMAGE ID       CREATED          SIZE
+kathara_zabbix7.4-ubuntu24   1.0       7a6a227f5cf2   15 seconds ago   803MB
+zabbix7.4_frr                1.0       e7bc768a1303   40 minutes ago   1.09GB
+mmorrow24work@digital-twin-version-1-0:~/docker/custom-images/docker_custom_image_kathara_zabbix7.4-ubuntu24$
+```
+
 
 ```
