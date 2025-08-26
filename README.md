@@ -57,7 +57,9 @@ WSL-Ubuntu 24.04.1 LTS:$
 * Set up services: Apache, Zabbix server, agent (foreground)
 * Tail logs to keep the container alive
 
-* ```
+# Example build ...
+
+```
   mmorrow24work@digital-twin-version-1-0:~/docker/custom-images/docker_custom_image_kathara_zabbix7.4_frr$ sudo docker build -t zabbix7.4_frr:1.0 .
 [+] Building 60.7s (8/8) FINISHED                                                                                                                                                                                                         docker:default
  => [internal] load build definition from Dockerfile                                                                                                                                                                                                0.0s
