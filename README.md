@@ -60,7 +60,8 @@ WSL-Ubuntu 24.04.1 LTS:$
 # Example build ...
 
 ```
-mmorrow24work@digital-twin-version-1-0: docker_custom_image_kathara_zabbix7.4-ubuntu24$ docker --debug build -t kathara_zabbix7.4-ubuntu24:1.0 . 
+mmorrow24work@digital-twin-version-1-0:~/docker/custom-images/docker_custom_image_kathara_zabbix7.4-ubuntu24$
+docker --debug build -t kathara_zabbix7.4-ubuntu24:1.0 . 
 [+] Building 137.4s (10/10) FINISHED                                                                                                                                                                                                      docker:default
  => [internal] load build definition from Dockerfile                                                                                                                                                                                                0.0s
  => => transferring dockerfile: 1.55kB                                                                                                                                                                                                              0.0s
